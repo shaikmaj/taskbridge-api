@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/taskbridge}
+    username: ${DB_USERNAME:taskbridge}
+    password: ${DB_PASSWORD:taskbridge}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+server:
+  error:
+    include-message: never
+logging:
+  pattern:
+    level: "%5p [tenant:%X{organisationId:-unknown}] [user:%X{userId:-unknown}]"

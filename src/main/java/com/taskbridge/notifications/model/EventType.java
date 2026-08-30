@@ -1,0 +1,2 @@
+package com.taskbridge.notifications.model;
+public enum EventType { MILESTONE_CREATED, MILESTONE_UPDATED, MILESTONE_CLOSED, MILESTONE_REOPENED, MILESTONE_DELETED }
